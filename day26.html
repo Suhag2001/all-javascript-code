@@ -1,0 +1,84 @@
+Relaationships 
+
+*Generalization (Is a)
+In Is a Relationship a class acquirs the properties of another calss and becomes the type of that clss . 
+
+Is a relationship can be implemented by using Inheritance
+
+Example : 
+
+class Animal{}
+
+class Dog extends Animal{}
+
+Dog "is a" Animal
+Here Dog class is sub calss and Animal is parent class 
+
+
+*Association (Has a)
+   In Has a relationship a class creates an object of another class and uses the properties of that class;
+
+
+  Example:
+  class Brain{}
+
+  class Animal{
+    brain ;
+    constructor(){
+      this.brain = new Brain();
+    }
+  }
+
+  Animal "Has a " Brain
+  Animal class can use the properties of Brain class
+
+
+  There are 2 types of Association 
+
+  -Composition 
+  -Aggregation
+
+  part of 
+
+  ownership
+
+  Composition :- 
+  In compositon a class who uses the properties of another class is the owner of the object 
+
+  Example :
+  class Brain{}
+
+  class Animal{
+    brain ;
+    constructor(){
+      this.brain = new Brain();
+    }
+  }
+
+  -Aggregation :-Aggregation
+  In aggregation relationship a class has an object of another class but is not owner of that object  . 
+
+  Example ;
+
+  classs Player{
+    play(){
+      console.log("playing...")
+    }
+  }
+
+  class Team{
+     addPlayer(p){
+      console.log("player added");
+      p.play;
+     }
+  }
+
+  class Match{
+    constructor(){
+      const t1 = new Team();
+
+      const p1 = new Player();
+
+      t1.addPlayer(p1)
+    }
+  }

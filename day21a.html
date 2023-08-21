@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>preventDefault function</title>
+  </head>
+  <body>
+    <a href="www.google.com" id="link">Google</a>
+    <form action="">
+      <label>Name</label>
+      <input type="text" name="u name" />
+      <input type="submit" value="submit" />
+    </form>
+    <script>
+      var a = document.getElementById("link");
+
+      a.addEventListener("click", function (e) {
+        e.preventDefault(); //this function prevent the defaul function of the html element
+        alert("Use our mobile app");
+      });
+
+      document.forms[0].addEventListener("submit", function (e) {
+        e.preventDefault();
+        alert("Add proper name ");
+      });
+    </script>
+  </body>
+</html>
